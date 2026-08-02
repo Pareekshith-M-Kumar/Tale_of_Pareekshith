@@ -1,3 +1,5 @@
-import "./style.css";
+import "./css/style.css";
 
-console.log("The Tale of Pareekshith has begun...");
+import { App } from "./app/app.js";
+
+document.querySelector("#app").innerHTML = App();
