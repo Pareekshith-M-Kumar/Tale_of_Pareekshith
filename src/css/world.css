@@ -1,0 +1,344 @@
+/* ==========================================
+   WORLD MAP
+========================================== */
+.world-map{
+    padding:70px 8% 40px;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at top,#15283d 0%,#0c1726 35%,#06101c 100%);
+}
+.world-map::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url("../assets/journey/map-bg.png");
+    background-size:cover;
+    background-position:center;
+    opacity:.14;
+    pointer-events:none;
+    z-index:0;
+}
+.world-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+.world-title p{
+    color:var(--gold);
+    letter-spacing:5px;
+    font-size:15px;
+    margin-bottom:8px;
+}
+.world-title h2{
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:12px;
+    color:white;
+}
+.world-title span{
+    display:block;
+    font-size:18px;
+    color:#cfd5dd;
+}
+/* ==========================================
+   MAP LAYOUT
+========================================== */
+.world-grid{
+    position:relative;
+    max-width:1400px;
+    height:2100px;
+    margin:auto;
+    z-index:2;
+}
+/*==========================================
+   ISLAND
+========================================== */
+.island-card{
+    position:absolute;
+    width:300px;
+    text-align:center;
+    background:none;
+    border:none;
+    box-shadow:none;
+    animation:floatIsland 6s ease-in-out infinite;
+    transition:.4s;
+}
+.island-card:hover{
+    transform:scale(1.05);
+}
+/* ==========================================
+   IMAGE
+========================================== */
+.island-card img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 20px 25px rgba(0,0,0,.45));
+    transition:.4s;
+}
+.island-card:hover img{
+    transform:translateY(-12px) scale(1.05);
+    filter:
+        drop-shadow(0 0 20px rgba(212,175,55,.45))
+        drop-shadow(0 25px 35px rgba(0,0,0,.5));
+}
+/* ==========================================
+   TEXT
+========================================== */
+.island-info{
+    margin-top:22px;
+}
+.island-info h3{
+    color:white;
+    font-size:30px;
+    margin-bottom:12px;
+}
+.island-info p{
+    color:var(--gold);
+    font-size:18px;
+    margin-bottom:16px;
+}
+.island-info span{
+    display:block;
+    color:#cfd5dd;
+    line-height:1.7;
+}
+/* ==========================================
+   FLOATING
+========================================== */
+@keyframes floatIsland{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.island-card:nth-child(2){
+    animation-delay:.5s;
+}
+.island-card:nth-child(3){
+    animation-delay:1s;
+}
+.island-card:nth-child(4){
+    animation-delay:1.5s;
+}
+.island-card:nth-child(5){
+    animation-delay:2s;
+}
+.island-card:nth-child(6){
+    animation-delay:2.5s;
+}
+.island-card:nth-child(7){
+    animation-delay:3s;
+}
+/* ==========================================
+   MAP POSITIONS
+========================================== */
+.island-1{
+top:60px;
+left:40px;
+}
+.island-2{
+top:290px;
+right: 40px;
+}
+.island-3{
+top:610px;
+left:140px;
+}
+.island-4{
+top:760px;
+right:100px;
+}
+.island-5{
+top:1100px;
+left:60px;
+}
+.island-6{
+top:1380px;
+right:60px;
+}
+.island-7{
+top:1740px;
+left:30%;
+transform:translateX(-50%);
+}
+.island-7 .island-info{
+    margin-top:40px;
+}
+.island-7 img{
+    width:85%;
+    margin:auto;
+    display:block;
+}
+@keyframes pathMove{
+from{
+stroke-dashoffset:0;
+}
+to{
+stroke-dashoffset:-180;
+}
+}
+.world-grid{
+position:relative;
+z-index:1;
+}
+.island-card{
+z-index:2;
+}
+/* ==========================================
+   RESPONSIVE WORLD MAP
+========================================== */
+@media (max-width:1024px){
+.world-grid{
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:120px;
+}
+.island-card{
+position:relative !important;
+top:auto !important;
+left:auto !important;
+right:auto !important;
+transform:none !important;
+width:320px;
+}
+.journey-path{
+display:none;
+}
+}
+@media (max-width:768px){
+.world-map{
+padding:100px 5%;
+}
+.world-title h2{
+font-size:42px;
+}
+.world-title p{
+font-size:16px;
+letter-spacing:5px;
+}
+.world-title span{
+font-size:18px;
+display:block;
+margin-top:20px;
+}
+.island-card{
+width:280px;
+}
+.island-info h3{
+font-size:26px;
+}
+.island-info span{
+font-size:16px;
+}
+}
+@media (max-width:480px){
+.world-map{
+padding:80px 20px;
+}
+.world-title h2{
+font-size:34px;
+}
+.island-card{
+width:240px;
+}
+}
+/* ===========================
+   JOURNEY PATH
+=========================== */
+.journey-path{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+overflow:visible;
+}
+
+.journey-path path{
+fill:none;
+stroke:#d4af37;
+stroke-width:10;
+stroke-linecap:round;
+stroke-linejoin:round;
+stroke-dasharray:20 16;
+filter:
+drop-shadow(0 0 10px rgba(212,175,55,.65))
+drop-shadow(0 0 20px rgba(212,175,55,.35));
+animation:pathMove 12s linear infinite;
+}
+/* Beginning & Academy are not clickable */
+.island-card:nth-child(1),
+.island-card:nth-child(2) {
+    pointer-events: none;
+    cursor: default;
+}
+/* ==========================================
+   MOBILE ADVENTURE MAP
+========================================== */
+
+@media (max-width:768px){
+
+.world-grid{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:80px;
+
+    height:auto;
+
+    position:relative;
+
+}
+
+.journey-path{
+
+    display:none;
+
+}
+
+.island-card{
+
+    position:relative !important;
+
+    top:auto !important;
+    left:auto !important;
+    right:auto !important;
+
+    transform:none !important;
+
+    width:100%;
+    max-width:380px;
+
+    text-align:center;
+
+}
+
+.island-card img{
+
+    width:100%;
+
+    max-width:320px;
+
+    margin:auto;
+
+}
+
+.island-info{
+
+    margin-top:20px;
+
+}
+
+}

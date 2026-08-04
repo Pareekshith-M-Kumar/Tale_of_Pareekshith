@@ -1,21 +1,85 @@
 export function Navbar() {
-  return `
-    <nav class="navbar">
 
-      <div class="logo">
-        <span class="logo-main">PAREEKSHITH</span>
-        <span class="logo-sub">Software Engineer</span>
-      </div>
+return `
 
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Journey</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<nav class="navbar">
 
-    </nav>
-  `;
+    <div class="logo">
+
+        <a href="#/" class="logo">
+
+    <span class="logo-main">
+
+        PAREEKSHITH
+
+    </span>
+
+    <span class="logo-sub">
+
+        Software Engineer
+
+    </span>
+
+</a>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+
+            <a href="#/">
+
+                Home
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#adventure-map">
+
+                Adventure Map
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#/projects">
+
+                Projects
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#/resume">
+
+                Resume
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#contact">
+
+                Contact
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+`;
+
 }

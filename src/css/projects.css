@@ -1,0 +1,285 @@
+.projects-hero{
+
+position:relative;
+
+min-height:85vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:140px 8%;
+
+background:
+linear-gradient(rgba(5,12,22,.75),
+rgba(5,12,22,.85)),
+url("../assets/hero/castle-bg.png");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.projects-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:radial-gradient(circle at top,
+rgba(212,175,55,.08),
+transparent 60%);
+
+}
+
+.projects-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:900px;
+
+}
+
+.projects-content h1{
+
+font-size:clamp(70px,8vw,120px);
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.projects-content .subtitle{
+
+font-size:24px;
+
+color:#d1d5db;
+
+}
+
+.projects-content .chapter{
+
+display:inline-block;
+
+padding:10px 26px;
+
+border:1px solid rgba(212,175,55,.35);
+
+border-radius:50px;
+
+color:var(--gold);
+
+letter-spacing:8px;
+
+margin-bottom:30px;
+
+}
+.projects-island{
+
+padding:80px 8%;
+
+background:#06101c;
+
+}
+
+.projects-title{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.projects-title p{
+
+color:var(--gold);
+
+letter-spacing:8px;
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+.projects-title h2{
+
+font-size:58px;
+
+color:white;
+
+}
+
+.projects-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.project-card{
+
+background:#111827;
+
+padding:28px;
+
+border-radius:20px;
+
+border:2px solid rgba(255,255,255,.05);
+
+transition:.35s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--gold);
+
+box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+.project-card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:white;
+
+}
+
+.project-card p{
+
+line-height:1.8;
+
+color:#d1d5db;
+
+margin-bottom:30px;
+
+}
+
+.project-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+}
+
+.project-tags span{
+
+padding:8px 16px;
+
+border-radius:30px;
+
+background:rgba(212,175,55,.12);
+
+color:var(--gold);
+
+font-size:15px;
+
+}
+.project-image{
+
+    width:220px;
+
+    height:220px;
+
+    margin:0 auto 30px;
+
+    border-radius:30px;
+
+    background:#111827;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+    transition:.35s;
+
+}
+
+.project-card:hover .project-image{
+
+    transform:scale(1.05);
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 30px rgba(212,175,55,.2);
+
+}
+.project-tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:25px 0;
+
+}
+
+.project-tech span{
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:rgba(212,175,55,.1);
+
+    color:var(--gold);
+
+    font-size:14px;
+
+}
+
+.project-links{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+.project-links a{
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.project-links a:hover{
+
+    letter-spacing:1px;
+
+}

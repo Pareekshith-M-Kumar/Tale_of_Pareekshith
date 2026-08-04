@@ -1,0 +1,451 @@
+/* ===========================
+   KINGDOM HERO
+=========================== */
+
+.kingdom-hero{
+
+position:relative;
+
+min-height:85vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:140px 8% 100px;
+
+background-attachment:fixed;
+
+background:
+linear-gradient(rgba(5,12,22,.72),
+rgba(5,12,22,.82)),
+url("../assets/hero/castle-bg.png");
+
+background-size:cover;
+
+background-position:center;
+
+overflow:hidden;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at top,
+rgba(212,175,55,.08),
+transparent 60%);
+
+pointer-events:none;
+
+}
+
+.kingdom-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:900px;
+
+}
+
+.chapter{
+
+display:inline-block;
+
+padding:10px 24px;
+
+border:1px solid rgba(212,175,55,.4);
+
+border-radius:50px;
+
+letter-spacing:8px;
+
+font-size:15px;
+
+color:var(--gold);
+
+margin-bottom:28px;
+
+background:rgba(212,175,55,.06);
+
+backdrop-filter:blur(8px);
+
+}
+
+.kingdom-content h1{
+
+font-size:clamp(70px,8vw,120px);
+
+font-weight:900;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:white;
+
+text-shadow:
+
+0 0 25px rgba(212,175,55,.25),
+
+0 10px 30px rgba(0,0,0,.6);
+
+margin-bottom:28px;
+
+line-height:1;
+
+}
+
+.subtitle{
+
+font-size:24px;
+
+line-height:1.8;
+
+color:#d7dbe2;
+
+max-width:720px;
+
+margin:auto;
+
+}
+.kingdom-content{
+
+animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ==========================================
+   RESPONSIVE KINGDOM PAGES
+========================================== */
+
+@media (max-width:1024px){
+
+.kingdom-hero{
+
+padding:120px 6% 90px;
+
+min-height:70vh;
+
+}
+
+.kingdom-content h1{
+
+font-size:72px;
+
+}
+
+.subtitle{
+
+font-size:20px;
+
+}
+
+.java-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+.project-content{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+text-align:center;
+
+}
+
+.project-buttons{
+
+justify-content:center;
+
+}
+
+.project-right{
+
+order:-1;
+
+}
+
+}
+
+/* ============================= */
+
+@media (max-width:768px){
+
+.kingdom-hero{
+
+padding:100px 5% 70px;
+
+min-height:60vh;
+
+}
+
+.chapter{
+
+font-size:14px;
+
+letter-spacing:4px;
+
+}
+
+.kingdom-content h1{
+
+font-size:54px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+.java-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.skill-card{
+
+padding:30px;
+
+}
+
+.project-left h2{
+
+font-size:42px;
+
+}
+
+.project-left span{
+
+font-size:18px;
+
+}
+
+.project-image{
+
+width:220px;
+
+height:220px;
+
+font-size:90px;
+
+}
+
+}
+
+/* ============================= */
+
+@media (max-width:480px){
+
+.kingdom-hero{
+
+padding:90px 20px 60px;
+
+}
+
+.kingdom-content h1{
+
+font-size:40px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+.project-left h2{
+
+font-size:34px;
+
+}
+
+.project-buttons{
+
+flex-direction:column;
+
+}
+
+.gold-btn,
+.outline-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.project-image{
+
+width:180px;
+
+height:180px;
+
+font-size:70px;
+
+}
+}
+/* ==========================================
+   RESPONSIVE KINGDOM
+========================================== */
+
+@media (max-width:1024px){
+
+.kingdom-hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:50px;
+
+}
+
+.kingdom-left{
+
+    align-items:center;
+
+}
+
+.kingdom-right{
+
+    justify-content:center;
+
+}
+
+.kingdom-right img{
+
+    width:420px;
+
+}
+
+.skill-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.featured-project{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.kingdom-hero{
+
+    padding:120px 25px 70px;
+
+}
+
+.kingdom-title{
+
+    font-size:44px;
+
+}
+
+.kingdom-right img{
+
+    width:300px;
+
+}
+
+.skill-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.project-tech{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.project-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.project-buttons a{
+
+    width:240px;
+
+    text-align:center;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.kingdom-title{
+
+    font-size:34px;
+
+}
+
+.kingdom-description{
+
+    font-size:16px;
+
+}
+
+.kingdom-right img{
+
+    width:240px;
+
+}
+
+}

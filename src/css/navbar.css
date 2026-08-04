@@ -1,79 +1,181 @@
 .navbar{
-
 position:fixed;
-
 top:0;
-
 left:0;
-
 width:100%;
-
 height:90px;
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 padding:20px 6%;
-
 z-index:1000;
-
 background:rgba(0,0,0,.25);
-
 backdrop-filter:blur(10px);
-
 }
 
 .logo{
-
 display:flex;
-
 flex-direction:column;
-
 }
 
 .logo-main{
-
-font-size:32px;
-
-font-weight:bold;
-
-letter-spacing:3px;
-
+display:block;
+font-size:42px;
+font-weight:800;
+letter-spacing:2px;
+color:#fff;
+line-height:1;
+transition:.3s;
 }
 
 .logo-sub{
+display:block;
+font-size:15px;
+margin-top:6px;
+color:#b8c1cc;
+letter-spacing:.5px;
+}
+.logo{
+display:flex;
+flex-direction:column;
+text-decoration:none;
+cursor:pointer;
+}
+.logo:hover .logo-main{
+text-shadow:
+0 0 10px rgba(212,175,55,.35),
+0 0 22px rgba(212,175,55,.18);
+}
 
-font-size:14px;
-
-opacity:.7;
-
+.logo:hover .logo-sub{
+color:#d4af37;
 }
 
 .nav-links{
-
 display:flex;
-
 gap:45px;
-
 list-style:none;
-
 }
 
 .nav-links a{
-
 color:white;
-
 text-decoration:none;
-
 transition:.3s;
-
 }
 
 .nav-links a:hover{
-
 color:var(--color-primary);
+}
+/* ==========================================
+   RESPONSIVE NAVBAR
+========================================== */
 
+@media (max-width:1024px){
+.navbar{
+padding:20px 5%;
+}
+
+.logo-main{
+font-size:42px;
+}
+
+.nav-links{
+gap:28px;
+}
+}
+
+@media (max-width:768px){
+.navbar{
+flex-direction:column;
+gap:20px;
+padding:18px 5%;
+}
+
+.logo{
+text-align:center;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.logo-main{
+font-size:34px;
+}
+
+.logo-sub{
+font-size:18px;
+}
+}
+
+@media (max-width:480px){
+.logo-main{
+font-size:28px;
+}
+
+.logo-sub{
+font-size:16px;
+}
+
+.nav-links{
+font-size:15px;
+gap:14px;
+}
+}
+/* ==========================================
+   MOBILE NAVBAR
+========================================== */
+
+@media (max-width: 768px){
+.navbar{
+    padding:15px 20px;
+}
+
+.logo h1{
+    font-size:36px;
+}
+
+.logo p{
+    font-size:16px;
+}
+
+.nav-links{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.nav-links a{
+    font-size:16px;
+}
+}
+@media (max-width:480px){
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.logo{
+    text-align:center;
+}
+
+.logo h1{
+    font-size:28px;
+}
+
+.logo p{
+    font-size:14px;
+}
+
+.nav-links{
+    width:100%;
+    justify-content:center;
+    gap:15px;
+}
+
+.nav-links a{
+    font-size:15px;
+}
 }

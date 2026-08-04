@@ -1,5 +1,6 @@
 import heroBg from "../assets/hero/hero_bg.png";
 import character from "../assets/hero/character.png";
+import resume from "../assets/resume/resume.pdf";
 
 export function Hero() {
 
@@ -11,8 +12,9 @@ export function Hero() {
         src="${heroBg}"
         class="hero-bg"
         alt="Background">
-
+        
     <div class="hero-overlay"></div>
+    <div class="hero-stars"></div>
 
     <div class="hero-wrapper">
 
@@ -40,15 +42,27 @@ export function Hero() {
 
                 <button class="primary-btn">
 
-                    Start Journey
+                    <a href="#adventure-map" class="primary-btn">
+
+    Begin Adventure
+
+</a>
 
                 </button>
 
-                <button class="secondary-btn">
+                <a
 
-                    Download Resume
+href="${resume}"
 
-                </button>
+download="Pareekshith_M_Kumar_Resume.pdf"
+
+class="secondary-btn"
+
+>
+
+Download Resume
+
+</a>
 
             </div>
 

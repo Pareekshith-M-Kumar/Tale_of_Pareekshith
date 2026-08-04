@@ -1,7 +1,8 @@
 .hero{
-
-min-height:100vh;
-
+    position:relative;
+    overflow:hidden;
+    /* min-height:100vh; */
+    /* height:100vh; */
 }
 
 .hero-bg{
@@ -30,17 +31,62 @@ z-index:-3;
 
     linear-gradient(
 
-    90deg,
+        90deg,
 
-    rgba(5,7,11,.88) 0%,
+        rgba(4,8,15,.92) 0%,
 
-    rgba(5,7,11,.58) 45%,
+        rgba(4,8,15,.78) 30%,
 
-    rgba(5,7,11,.25) 100%
+        rgba(4,8,15,.42) 58%,
+
+        rgba(4,8,15,.12) 78%,
+
+        transparent 100%
 
     );
 
     z-index:-2;
+
+}
+/* ==========================================
+   STARS LAYER
+========================================== */
+
+.hero-stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../assets/effects/stars.png");
+
+    background-size:cover;
+
+    background-repeat:repeat;
+
+    opacity:.35;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    animation:starsFloat 120s linear infinite;
+
+}
+
+@keyframes starsFloat{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-180px);
+
+    }
 
 }
 
@@ -72,12 +118,13 @@ z-index:-3;
     flex-direction:column;
     justify-content:center;
     align-items:flex-start;
+    position: relative;
 
-    gap:26px;
+    gap:12px;
 
-    padding-top:80px;
+    padding-top:20px;
 
-    z-index:10;
+    z-index:2;
 
 }
 
@@ -95,13 +142,19 @@ font-size:18px;
 
     font-family:var(--font-heading);
 
-    font-size:clamp(3.5rem,5vw,5.8rem);
+    font-size:clamp(3rem,4.2vw,5rem);
 
     line-height:1;
 
     color:white;
 
     max-width:700px;
+
+    text-shadow:
+
+        0 6px 18px rgba(0,0,0,.85),
+
+        0 0 35px rgba(0,0,0,.35);
 
 }
 
@@ -112,16 +165,20 @@ font-size:18px;
     color:var(--color-primary);
 
 }
-
 .hero-text{
 
     font-size:1.4rem;
 
-    color:#d5d5d5;
+    color:#ececec;
 
-    line-height:1.8;
+    line-height:1.4;
+    margin-bottom:0;
 
     white-space:pre-line;
+
+    text-shadow:
+
+        0 2px 10px rgba(0,0,0,.9);
 
 }
 
@@ -129,9 +186,10 @@ font-size:18px;
 
     display:flex;
 
-    gap:20px;
+    gap:18px;
+    margin-top:-8px;
 
-    flex-wrap:wrap;
+    /* flex-wrap:wrap; */
 
 }
 
@@ -143,7 +201,7 @@ font-size:18px;
 
     justify-content:center;
 
-    padding:18px 38px;
+    padding:16px 34px;
 
     background:var(--color-primary);
 
@@ -160,6 +218,7 @@ font-size:18px;
     cursor:pointer;
 
     transition:.3s;
+    box-shadow:0 10px 30px rgba(212,175,55,.28);
 
 }
 
@@ -189,6 +248,8 @@ font-size:18px;
 
     cursor:pointer;
 
+    backdrop-filter:blur(6px);
+
 }
 
 .hero-right{
@@ -206,11 +267,168 @@ height:100%;
 .character{
 
     /* width:100%; */
-    width: 800px;
+    width: 740px;
     max-width:800px;
-
     position:relative;
+    bottom:-55px;
+    filter:
+        drop-shadow(0 0 25px rgba(255,215,120,.15))
+        drop-shadow(0 30px 40px rgba(0,0,0,.45));
+}
+/* ==========================================
+   TABLET
+========================================== */
 
-    bottom:-35px;
+@media (max-width:1024px){
+
+.hero-wrapper{
+
+    grid-template-columns:1fr;
+    text-align:center;
+
+    padding:120px 40px 60px;
+
+}
+
+.hero-left{
+
+    align-items:center;
+
+    padding-top:0;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+.hero-text{
+
+    font-size:22px;
+
+}
+
+.character{
+
+    width:500px;
+
+    margin-top:40px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.hero-wrapper{
+
+    padding:110px 25px 40px;
+
+}
+
+.hero h1{
+
+    font-size:44px;
+
+    line-height:1.1;
+
+}
+
+.hero-top{
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+}
+
+.hero-text{
+
+    font-size:18px;
+
+}
+
+.character{
+
+    width:340px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+    align-items:center;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:260px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.hero-wrapper{
+
+    padding:100px 20px 30px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero-text{
+
+    font-size:16px;
+
+}
+
+.character{
+
+    width:280px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:230px;
+
+    padding:14px 20px;
+
+    font-size:16px;
+
+}
+
+}
+html{
+
+    scroll-behavior:smooth;
 
 }
